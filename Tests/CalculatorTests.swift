@@ -11,4 +11,19 @@ import XCTest
 
 class CalculatorTests: XCTestCase {
 
+    var sut: Calculator! // System Under Test
+
+    override func setUp() {
+        super.setUp()
+        sut = Calculator()
+    }
+
+    func test_foo() {
+        // Given (dado que)
+
+        // When (quando)
+
+        // Then (então)
+    }
+
 }
