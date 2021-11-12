@@ -16,4 +16,16 @@ class Calculator {
     func sum(_ lhs: Int, _ rhs: Int) {
         result = lhs + rhs
     }
+
+    func subtract(_ lhs: Int, _ rhs: Int) {
+        result = lhs - rhs
+    }
+
+    func multiply(_ lhs: Int, _ rhs: Int) {
+        result = lhs * rhs
+    }
+
+    func divide(_ lhs: Int, _ rhs: Int) {
+        result = lhs / rhs
+    }
 }
