@@ -106,4 +106,38 @@ class CalculatorTests: XCTestCase {
         // Then (então)
         XCTAssertEqual(sut.result, .infinity)
     }
+
+    // MARK: - Challenge Operations
+
+    func test_operation_power_of_zero() {
+        sut = Calculator()
+
+        sut.power(2, 0)
+
+        XCTAssertEqual(sut.result, 1)
+    }
+
+    func test_operation_power_zero_of_any() {
+        sut = Calculator()
+
+        sut.power(0, 5)
+
+        XCTAssertEqual(sut.result, .infinity)
+    }
+
+    func test_operation_power_of_negative() {
+        sut = Calculator()
+
+        sut.power(2, -3)
+
+        XCTAssertEqual(sut.result, 0.125)
+    }
+
+    func test_operation_power_of_positive() {
+        sut = Calculator()
+
+        sut.power(2, 3)
+
+        XCTAssertEqual(sut.result, 8)
+    }
 }
