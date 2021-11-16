@@ -26,6 +26,20 @@ class Calculator {
     }
 
     func divide(_ lhs: Int, _ rhs: Int) {
-        result = lhs / rhs
+        if lhs == 0 && rhs == 0 {
+            // 0 / 0 = 1
+            result = 1
+
+        } else if lhs == 0 {
+            // 0 / X = zero
+            result = .zero
+
+        } else if rhs == 0 {
+            // X / 0 = infinito
+            result = .max
+
+        } else {
+            result = lhs / rhs
+        }
     }
 }

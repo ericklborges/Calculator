@@ -74,4 +74,36 @@ class CalculatorTests: XCTestCase {
         XCTAssertEqual(sut.result, 2)
     }
 
+    func test_operation_divide_Zero_and_Zero() {
+        // Given (dado que)
+        sut = Calculator()
+
+        // When (quando)
+        sut.divide(.zero, .zero)
+
+        // Then (então)
+        XCTAssertEqual(sut.result, 1)
+    }
+
+    func test_operation_divide_zero_and_X() {
+        // Given (dado que)
+        sut = Calculator()
+
+        // When (quando)
+        sut.divide(0, 5)
+
+        // Then (então)
+        XCTAssertEqual(sut.result, 0)
+    }
+
+    func test_operation_divide_X_and_Zero() {
+        // Given (dado que)
+        sut = Calculator()
+
+        // When (quando)
+        sut.divide(10, 0)
+
+        // Then (então)
+        XCTAssertEqual(sut.result, .max)
+    }
 }
