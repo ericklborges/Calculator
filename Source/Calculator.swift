@@ -9,23 +9,23 @@ import Foundation
 
 class Calculator {
 
-    private(set) var result: Int = 0
+    private(set) var result: Double = 0
 
     // MARK: - Operations
 
-    func sum(_ lhs: Int, _ rhs: Int) {
+    func sum(_ lhs: Double, _ rhs: Double) {
         result = lhs + rhs
     }
 
-    func subtract(_ lhs: Int, _ rhs: Int) {
+    func subtract(_ lhs: Double, _ rhs: Double) {
         result = lhs - rhs
     }
 
-    func multiply(_ lhs: Int, _ rhs: Int) {
+    func multiply(_ lhs: Double, _ rhs: Double) {
         result = lhs * rhs
     }
 
-    func divide(_ lhs: Int, _ rhs: Int) {
+    func divide(_ lhs: Double, _ rhs: Double) {
         if lhs == 0 && rhs == 0 {
             // 0 / 0 = 1
             result = 1
@@ -36,7 +36,7 @@ class Calculator {
 
         } else if rhs == 0 {
             // X / 0 = infinito
-            result = .max
+            result = .infinity
 
         } else {
             result = lhs / rhs

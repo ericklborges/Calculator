@@ -104,6 +104,6 @@ class CalculatorTests: XCTestCase {
         sut.divide(10, 0)
 
         // Then (então)
-        XCTAssertEqual(sut.result, .max)
+        XCTAssertEqual(sut.result, .infinity)
     }
 }
